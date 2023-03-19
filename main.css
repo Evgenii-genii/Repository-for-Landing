@@ -268,7 +268,7 @@ footer {
 .promo__image {  
     width: 50%;
     flex-shrink: 0;
-    background: url(img/promo.jpeg) 100% no-repeat; /* Добавляем фон */
+    background: url(img/promo.jpeg) 100% no-repeat;
     background-size: cover;
     border-radius: 25px 0px 0px 25px;
 }   
