@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -14,20 +14,20 @@
     <link rel="stylesheet" href="fa/css/all.min.css">
 </head>
 <body>
-    
  <header>
     <img class="header__logo" src='img/logo.svg'>
     <div class="header-controls">
-        <a href="#contacts">Contacts</a>
+        <a href="#form">Contacts</a>
         <button>Order</button>
         
     </div>
 </header>
  <section class="about">
+    <canvas class="orb-canvas" id="orb-canvas"></canvas>
     <div class="about__info animate__animated animate__fadeInLeft animate__slow	2s">
         <h1>Солнечные панели GreenRobotic</h1>
         <p>Производите дешёвую экологически чистую электроэнергию из солнечного света</p>
-        <button>Узнать подробнее
+        <button class="more-button" href="#features">Узнать подробнее
             <i class="fa-solid fa-chevron-right"></i>
         </button>
     </div>
@@ -36,7 +36,65 @@
         <img class="about__image" src="img/solar-panel.png">
     </div>
  </section>
- <section class="form">
+ <section class="features" id="features">
+    <div class="cards">
+        <div class="card">
+            <div class="card__logo" style="color: #ffb406"><i class="fa-solid fa-solar-panel"></i></div>
+            <h3>Уменьшите счета за электричество</h3>
+            <p>Используйте чистую солнечную энергию для питания своего дома: уменьшите зависимость от электросети и счета за электричество</p>
+        </div>
+        <div class="card">
+            <div class="card__logo" style="color: #ad1714">24/7</div>
+            <h3>Мониторинг электроэнергии</h3>
+            <p>Управляйте своей системой солнечных панелей из любой точки мира с помощью специального мобильного приложения</p>
+        </div>
+        <div class="card">
+            <div class="card__logo" style="color: #22a030"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Максимальная эффективность</h3>
+            <p>Солнечные панели GreenRobotic обеспечивают максимальное производство энергии круглый год, даже на крышах со сложными углами</p>
+        </div>
+    </div>
+    <div class="features__border"></div>
+    <div class="features__feedback">
+        <div class="features__feedback-left">
+            <h2>Нам доверяет<br>
+                <div class="features__clients-count">5000+</div> счастливых клиентов
+            </h2>
+            <p>Мы помогли тысячам людей перейти на зеленую энергию<br>После заказа мы позаботимся обо всем: доставка панелей, проект, установка, помощь в использовании</p>
+        </div>
+        <div class="features__feedback-right">
+            <div class="features__box features__savings-box" >
+                <h3>30 млн ₽</h3>
+                <p>Помогаем экономить нашим клиентам ежемесячно</p>               
+            </div>
+            <div class="features__box features__rate-box">
+                <h3>4.7</h3>
+                <p class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </p>
+                <p>Средняя оценка наших клиентов</p>
+            </div>
+        </div>
+      </div>
+    <section class="promo">
+        <div class="promo__image"></div>
+        <div class="promo__right">
+            <div class="promo__right-card">
+                <h2>Зарядите свой дом</h2>
+                <p>Солнечные панели сертифицированы мировыми экспертами: система безопасна и надежна</p>
+                <p>Следите за накоплением энергии вашего дома в режиме реального времени и настраивайте процент расхода и накопления энергии</p>
+                <div>
+                    <button class="button_card">Заказать <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<section class="form" id="form">
     <div class="form__container">
         <h1>Оставьте свои контакты.</h1>
         <p>Поможем подобрать модель.<br>Выбрать удобный вариант доставки и установки.<br>Гарантия возврата денег.</p>
@@ -60,19 +118,14 @@
                     <option value="1-3">1 000$ - 3 000$</option>
                     <option value="3-6">3 000$ - 6 000$</option>
                     <option value="6-10">6 000$ - 10 000$</option>
+                    <option value="other">Другое</option>
                 </select>
             </div>
             <button type="submit" class="form__submit">Отправить заявку</button>
-
-
-
         </form>
-
     </div>
+</section>
 
- </section>
-
- 
 <footer>
     <div class="footer__container">
         <div class="footer__group">
@@ -98,11 +151,12 @@
         </div>
 
     </div>
-    <div class="footer__copyright">
-        GreenCorp © 2021
-     </div>
-
+    
 </footer>
+
+<script src="js/canvas.js"></script>
+<script src="js/animations.js"></script>
 <script src="fa/js/all.min.js"></script>
+<script src="js/some.js"></script>
 </body>
 </html>
